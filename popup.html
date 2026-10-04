@@ -3,29 +3,69 @@
 
 <head>
   <meta charset="UTF-8">
-
   <title>YouTube Keyboard Guard</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>YouTube Keyboard Guard</h1>
+  <div class="container">
 
-  <p>
-    Protection contre les fausses manipulations
-  </p>
+    <header class="header">
+      <div class="logo">YK</div>
 
-  <label>
-    <input type="checkbox" id="toggle">
+      <div>
+        <h1>YouTube Keyboard Guard</h1>
+        <p>Protection contre les fausses manipulations</p>
+      </div>
+    </header>
 
-    Bloquer les raccourcis
-  </label>
+    <main>
 
-  <p id="status">
-    Protection activée
-  </p>
+      <section class="protection-card">
+
+        <div class="protection-info">
+          <span class="status-dot"></span>
+
+          <div>
+            <strong>Protection clavier</strong>
+            <span id="status">Activée</span>
+          </div>
+        </div>
+
+        <label class="switch">
+          <input type="checkbox" id="toggle" checked>
+          <span class="slider"></span>
+        </label>
+
+      </section>
+
+      <section class="shortcuts">
+
+        <h2>Raccourcis bloqués</h2>
+
+        <div class="shortcut-list">
+          <span>←</span>
+          <span>→</span>
+          <span>J</span>
+          <span>L</span>
+          <span>Espace</span>
+          <span>K</span>
+          <span>↑</span>
+          <span>↓</span>
+          <span>M</span>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <span>YouTube Keyboard Guard</span>
+      <span>v1.0.0</span>
+    </footer>
+
+  </div>
 
   <script src="popup.js"></script>
 
