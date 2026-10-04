@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Keyboard Guard",
+  "version": "1.0.0",
+  "description": "Prevents accidental YouTube keyboard shortcuts.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "YouTube Keyboard Guard",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://music.youtube.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
