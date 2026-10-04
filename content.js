@@ -8,13 +8,36 @@ const blockedKeys = new Set([
   "c", "C",
   "i", "I",
   "t", "T",
-  "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+
+  // Chiffres
+  "0", "1", "2", "3", "4",
+  "5", "6", "7", "8", "9",
+
+  // Symboles AZERTY
+  "&", "é", "\"", "'", "(",
+  "-", "è", "_", "ç", "à",
+  ")", "=", 
+
+  // Navigation
   "ArrowLeft",
   "ArrowRight",
   "ArrowUp",
   "ArrowDown",
   "Home",
   "End"
+]);
+
+const blockedCodes = new Set([
+  "Digit0",
+  "Digit1",
+  "Digit2",
+  "Digit3",
+  "Digit4",
+  "Digit5",
+  "Digit6",
+  "Digit7",
+  "Digit8",
+  "Digit9"
 ]);
 
 function isTypingElement(element) {
@@ -32,17 +55,18 @@ function isTypingElement(element) {
 
 document.addEventListener("keydown", (event) => {
 
-  // Ne rien bloquer lorsque l'utilisateur écrit
   if (isTypingElement(event.target)) {
     return;
   }
 
-  // Ne pas interférer avec les raccourcis du navigateur
   if (event.ctrlKey || event.altKey || event.metaKey) {
     return;
   }
 
-  if (blockedKeys.has(event.key)) {
+  if (
+    blockedKeys.has(event.key) ||
+    blockedCodes.has(event.code)
+  ) {
     event.preventDefault();
     event.stopPropagation();
     event.stopImmediatePropagation();
