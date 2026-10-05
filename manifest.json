@@ -3,6 +3,7 @@
   "name": "YouTube Keyboard Guard",
   "version": "1.0.0",
   "description": "Prevents accidental YouTube keyboard shortcuts.",
+  "homepage_url": "https://github.com/190yim/youtube-keyboard-guard",
   "permissions": [
     "storage",
     "activeTab"
