@@ -26,16 +26,8 @@ body {
 .logo {
   width: 42px;
   height: 42px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   border-radius: 12px;
-  background: #ff0033;
-
-  font-size: 14px;
-  font-weight: bold;
+  object-fit: cover;
 }
 
 .header h1 {
