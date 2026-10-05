@@ -1,11 +1,14 @@
 const toggle = document.getElementById("toggle");
 const status = document.getElementById("status");
+const statusDot = document.getElementById("statusDot");
 
 function updateStatus() {
   if (toggle.checked) {
     status.textContent = "Activée";
+    statusDot.classList.add("active");
   } else {
     status.textContent = "Désactivée";
+    statusDot.classList.remove("active");
   }
 }
 
