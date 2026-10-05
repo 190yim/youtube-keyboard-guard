@@ -5,7 +5,7 @@
   "description": "Prevents accidental YouTube keyboard shortcuts.",
   "homepage_url": "https://github.com/190yim/youtube-keyboard-guard",
   "permissions": [
-    "storage",
+    "storage"
   ],
   "action": {
     "default_title": "YouTube Keyboard Guard",
